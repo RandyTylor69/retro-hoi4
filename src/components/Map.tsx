@@ -111,8 +111,7 @@ export default function Map() {
 
   return (
     <svg
-      width="1292"
-      height="832"
+      className="max-w-160 mt-12"
       viewBox="0 0 1292 832"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
