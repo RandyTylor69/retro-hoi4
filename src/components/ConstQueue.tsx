@@ -2,6 +2,7 @@ import { useState, useEffect, useContext } from "react";
 import { ThemeContext } from "../App";
 import { type ConstObjectType } from "../data/types";
 
+
 export default function ConstQueue() {
   const context = useContext(ThemeContext);
   if (!context) console.error("Context missing");
@@ -11,6 +12,7 @@ export default function ConstQueue() {
   function capitalize(str:string){
     return str.charAt(0).toUpperCase() + str.slice(1);
   }
+
 
   return (
     <article
@@ -39,7 +41,7 @@ export default function ConstQueue() {
             <div className="h-full w-80 flex items-center">
               <h1 className="text-white/80 text-lg">{capitalize(q.name)}</h1>
             </div>
-            
+
             <div className="h-full w-20 flex items-center">
               <img src="public\assets\civ.png" />
             </div>

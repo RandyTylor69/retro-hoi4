@@ -16,6 +16,11 @@ export default function Map() {
     }
   }
 
+  function playConstSound(){
+    const audio = new Audio("/assets/construction.wav");
+    audio.play();
+  }
+
   function handleConstructionClick(
     e: React.MouseEvent<SVGPathElement, MouseEvent>,
     stateName: string
@@ -27,6 +32,7 @@ export default function Map() {
       console.log("State building slot is full.");
       return;
     }
+    playConstSound();
     // 1.1 Check if the already constructing MAX_SLOT buildings in this state.
     for (let i = 0; i < constQueue.length; i++) {
       if (constQueue[i].name == targetState!.name) {
